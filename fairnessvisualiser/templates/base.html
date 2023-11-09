@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href=" {% static '/style/style.css' %} "
+    />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <ul>
+        <li><a href="/" class="corner {% if request.path == "/" %}selected{% endif %}" id="left">Home</a></li>
+        <li><a href="/fairness-visualiser" class="{% if request.path == "/fairness-visualiser" %}selected{% endif %}">Fairness Visualiser</a></li>
+        <li><a href="/user-guide" class="{% if request.path == "/user-guide" %}selected{% endif %}">User Guide</a></li>
+        <li><a href="/about" class="{% if request.path == "/about" %}selected{% endif %}">About the Project</a></li>
+        <li><a href="/contact" class="corner {% if request.path == "/contact" %}selected{% endif %}" id="right">Get in Touch</a></li>
+      </ul>
+    </div>
+
+    <div id="content">{% block content %}{% endblock %}</div>
+  </body>
+</html>

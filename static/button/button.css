@@ -1,0 +1,31 @@
+.button {
+  display: flex;
+  width: max-content;
+  padding: 30px 30px 30px 30px;
+  border-radius: 42px;
+  color: #dae1e3;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.button.coloured {
+  background-color: #325E71;
+}
+
+.button.coloured:hover {
+  background-color: #4A7B86;
+}
+
+.button.empty {
+  border-color: #dae1e3;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.button.empty:hover {
+  border-color: #dae1e3;
+  background-color: #dae1e3;
+  color: #373737;
+}

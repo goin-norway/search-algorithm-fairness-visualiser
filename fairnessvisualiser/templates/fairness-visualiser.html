@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load component_tags %}
+{% block title%}Intersectional Fairness Visualiser{% endblock %}
+{%block content %}
+    <p>
+    Using the TREC Cranfield dataset, the equality of opportunity (mean average
+    precision of positive class compared to ground-truth ranking) of TF-IDF for
+    authors whose name beginning with "A" is {{ metric }}%.
+    </p>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load component_tags %}
+
+{% block title %}Home{%endblock %}
+
+{%block content %}
+<h1>Welcome.</h1>
+<p>A short and catchy sentence or two of introduction, defining that this is an intersectional fairness visualiser.</p>
+<span style="display: flex; flex-style: row; gap: 20px;">
+    {% component "button" text="Quick Start Guide" link="/" %}
+    {% component "button" text="Create a Visualisation" link="/fairness-visualiser/" empty_style_button="True" %}
+</span>
+{% component_css_dependencies %}
+{% endblock %}
